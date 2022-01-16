@@ -2,4 +2,4 @@
 
 So far, I've used the following Models:
 + Logistic Regression
-+ Random Forests(soon)
++ Random Forests + Auto Tuning (Optuna)
