@@ -1,1 +1,7 @@
 .env_*
+__pycache__
+.ipynb_checkpoints
+
+Data\ Set*
+!Data\ Set\credit*
+!Date\ Set\readme*
