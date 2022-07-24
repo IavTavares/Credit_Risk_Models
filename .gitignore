@@ -4,5 +4,10 @@ __pycache__
 
 Data\ Set*
 !Data\ Set\credit*
-!Date\ Set\readme*
+!Data\ Set\readme*
+
 mlruns
+
+mlflow_artifacts/*
+!mlflow_artifacts/RanFor
+!mlflow_artifacts/LogReg
