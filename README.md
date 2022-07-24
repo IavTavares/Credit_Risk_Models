@@ -2,6 +2,7 @@
 
 So far, I've used the following Models:
 + Logistic Regression (Baseline model)
++ Logistic Regression + Auto Tuning (Optuna)
 + Random Forests + Auto Tuning (Optuna)
 
 I've just added MLFlow code to track Logistic Regression runs.
