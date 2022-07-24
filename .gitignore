@@ -11,3 +11,4 @@ mlruns
 mlflow_artifacts/*
 !mlflow_artifacts/RanFor
 !mlflow_artifacts/LogReg
+!mlflow_artifacts/LogReg_Optuna
