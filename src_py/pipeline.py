@@ -44,11 +44,11 @@ def preprocessing():
     # 
     return [X_train, X_test, Y_train, Y_test]
 
-def lr_mlflow(experiment,data:list):
+def lr_mlflow(experiment_id,data:list):
     """experiment is a mlflow experiment object"""
     [X_train, X_test, Y_train, Y_test] = data
     reg_base=LogisticRegression()
-    with mlflow.start_run(experiment_id=experiment.experiment_id, run_name="Logistic_Regression"):
+    with mlflow.start_run(experiment_id=experiment_id, run_name="Logistic_Regression"):
         reg_base.fit(X_train, np.ravel(Y_train))
         #mlflow.log_params([])
         Y_pred=reg_base.predict(X_test)
@@ -104,9 +104,9 @@ def lr_mlflow(experiment,data:list):
 if __name__ == "__main__":
     data = preprocessing()
     try:
-        experiment= mlflow.create_experiment("Credit Risk Experiments",
+        experiment_id= mlflow.create_experiment("Credit Risk Experiments",
                                             artifact_location = "mlflow_artifacts")
     except MlflowException:
-        experiment = mlflow.get_experiment_by_name("Credit Risk Experiments")
+        experiment_id = mlflow.get_experiment_by_name("Credit Risk Experiments").experiment_id
 
-    lr_mlflow(experiment,data)
+    lr_mlflow(experiment_id,data)
